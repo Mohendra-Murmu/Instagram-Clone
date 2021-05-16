@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Instagram Homepage</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet/mystyle.css">
+    <style>
+        body {
+	margin: 0;
+	padding: 0;
+	background-color: #F5F5F5;
+}
+
+main {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	position: relative;
+	justify-content: center;
+}
+
+.mobile-slider {
+	background-image: url("https://i.imgur.com/brGnLM2.png");
+	background-repeat: no-repeat;
+	background-size: 455px 620px;
+	width: 430px;
+	height: 600px;
+	position: relative;
+	top: 5px;
+	left: 15px;
+}
+
+.mobile-slider-img1 {
+	position: relative;
+	top: 100px;
+	left: 151px;
+}
+
+.form-section {
+	width: 430px;
+	height: 390px;
+	border: 1px solid #E2E0E0;
+	position: absolute;
+	top: 20px;
+	left: 440px;
+	background-color: #fff;
+}
+
+.form-section-img1 {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.form-section-input1 {
+	width: 270px;
+	height: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding: 5px;
+	background-color: #F5F5F5;
+	border: 1px solid #04CEDF;
+	border-radius: 5px;
+}
+
+.form-section-input2 {
+	width: 270px;
+	height: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -10px;
+	display: block;
+	padding: 5px;
+	background-color: #F5F5F5;
+	border: 1px solid #04CEDF;
+	border-radius: 5px;
+}
+
+.form-section-button {
+	width: 280px;
+	height: 30px;
+	background-color: #04A2D0;
+	color: #fff;
+	font-family: arial;
+	font-weight: bolder;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	display: block;
+	opacity: 0.4;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.form-section-button:hover {
+	background-color: red;
+}
+
+.form-section-p {
+	text-align: center;
+	font-family: arial;
+	opacity: 0.6;
+}
+
+a {
+	text-decoration: none;
+	color: #005DAB;
+	text-align: center;
+}
+a:hover {
+	color: red;
+}
+
+.form-section-2 {
+	width: 430px;
+	height: 50px;
+	border: 1px solid #E2E0E0;
+	position: absolute;
+	top: 420px;
+	left: 440px;
+	background-color: #fff;
+	text-align: center;
+}
+
+.form-section-2-p {
+	padding: 10px;
+}
+
+.bottom-section {
+	width: 430px;
+	height: 130px;
+	position: absolute;
+	top: 480px;
+	left: 440px;
+	text-align: center;
+}
+
+ul {
+	padding: 10px;
+	text-align: center;
+}
+
+li {
+	display: inline;
+	padding: 0 5px 0 5px;
+	font-family: monospace;
+}
+
+footer p {
+	font-family: monospace;
+	color: #A1A1A1;
+	font-size: 22px;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!--Start Main-->
+    <main>
+        <!--Start Section 1-->
+        <section>
+            <div class="mobile-slider">
+                <img class="mobile-slider-img1" src="https://i.imgur.com/oyCrOjF.jpg">
+            </div>
+        </section>
+        <!--End Section 1-->
+        <!--Start Section 2-->
+        <section>
+            <div class="form-section">
+                <img class="form-section-img1" src="https://i.imgur.com/f1UoWxe.png" width="200">
+                <input class="form-section-input1" type="text" placeholder="Phone number. username, or email"
+                    required><br>
+                <input class="form-section-input2" type="password" placeholder="Password" required>
+                <button class="form-section-button" type="submit" id="submit" value="submit">Log In</button>
+                <p class="form-section-p">-------------------- OR --------------------</p><br>
+                <a href="https://web.facebook.com/" target="_blank">
+                    <p><i class="fab fa-facebook-square"></i>&nbsp;&nbsp; Log in with Facebook</p>
+                </a>
+                <a href="https://www.instagram.com/accounts/password/reset/" target="_blank">
+                    <p>Forgot password?</p>
+                </a>
+            </div>
+        </section>
+        <!--End Section 2-->
+        <!--Start Section 3-->
+        <section>
+            <div class="form-section-2">
+                <p class=".form-section-2-p">Don't have an account? <a
+                        href="https://www.instagram.com/accounts/emailsignup/" target="_blank">Sign up</a></p>
+            </div>
+        </section>
+        <!--End Section 3-->
+        <!--Start Section 4-->
+        <section>
+            <div class="bottom-section">
+                <p>Get the app.</p>
+                <img src="https://i.imgur.com/2VRfjV9.png" width="180">
+                <img src="https://i.imgur.com/OgUTyrf.png" width="180">
+            </div>
+        </section>
+        <!--End Section 4-->
+    </main>
+    <!-- End Main-->
+    <footer>
+        <ul>
+            <a href="https://about.instagram.com/about-us">
+                <li>ABOUT</li>
+            </a>
+            <a href="https://help.instagram.com/">
+                <li>HELP</li>
+            </a>
+            <a href="https://instagram-press.com/">
+                <li>PRESS</li>
+            </a>
+            <a href="https://www.instagram.com/developer/">
+                <li>API</li>
+            </a>
+            <a href="https://www.instagram.com/about/jobs/">
+                <li>JOBS</li>
+            </a>
+            <a href="https://www.instagram.com/legal/privacy/">
+                <li>PRIVACY</li>
+            </a>
+            <a href="https://www.instagram.com/legal/terms/">
+                <li>TERMS</li>
+            </a>
+            <a href="https://www.instagram.com/explore/locations/">
+                <li>LOCATIONS</li>
+            </a>
+            <a href="https://www.instagram.com/directory/profiles/">
+                <li>TOP ACCOUNTS</li>
+            </a>
+            <a href="https://www.instagram.com/directory/hashtags/">
+                <li>HASHTAGS</li>
+            </a>
+            <a href="#">
+                <li>LANGUAGE</li>
+            </a>
+            <p>&copy; 2020 INSTAGRAM FROM FACEBOOK</p>
+        </ul>
+    </footer>
+</body>
+
+</html>

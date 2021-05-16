@@ -1,0 +1,42 @@
+.main-header {
+  background-color: #fff;
+  height: 54px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+.main__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo__image {
+  float: left;
+  object-fit: contain;
+  max-width: 100%;
+}
+.main__search {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.main__header__links {
+  display: flex;
+  align-items: center;
+}
+.header_links {
+  margin-left: 10px;
+  color: gray;
+}
+.account__btn {
+  background: #fff;
+}
+.login__buttons Button {
+  margin-left: 1px;
+  align-items: center;
+}
+.header_links {
+  cursor: pointer;
+}

@@ -1,0 +1,9 @@
+.sidebar__suggestions__header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.suggestions_title {
+  color: gray;
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Instagram</title>
+    <link rel="icon" type="image/img"
+        href="https://cdn2.iconfinder.com/data/icons/instagram-new/512/instagram-logo-color-512.png">
+<style>
+    	
+
+@media screen and (max-width: 1320px){ 
+ .insta-img{
+ 	visibility: hidden;
+ 	text-align: center;
+ }}
+ @media screen and (max-width: 1320px){ 
+ main,nav{
+
+ 	position: relative;
+ 	display: flex;
+ 	flex-flow: column;
+ 	justify-content: center;
+ 	text-align: center;
+ }
+  }
+@media (min-width: 600px) and (max-width: 800px) {
+  body {
+/*  	color: red;*/
+  	display: flex;
+  	justify-content: center;
+    text-align: center;
+    font-size: 20px;
+  }
+/*  main,nav{
+ 	position: relative;
+ 	display: flex;
+ 	flex-flow: row;
+ 	justify-content: center;
+ 	text-align: center;
+ }*/
+}
+
+/*@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
+		display:flex;
+		justify-content:center;
+	}*/
+
+		body{
+			background-color: #fafafa;
+		}
+		article{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			/*border:1px solid #000;*/
+		}
+		form{
+			border: 1px solid #dbdbdb;
+			border-radius: 2px;
+			width: 350px;
+			height: 380px;
+			margin-left: 8px;
+			text-align: center;
+			margin-top: 70px;
+		}
+		form h1{
+
+			text-align: center;
+
+				padding:14px;
+			margin:10px 12px;
+			font-family:'Billabong';
+			src: url('Billabong.ttf');
+		 	text-align: center;
+		 	font-size: 50px;
+		}
+		#h1{
+			padding:14px;
+			margin:10px 12px;
+			font-family:'Billabong';
+			src: url('Billabong.ttf');
+		 	text-align: center;
+		 	font-size: 50px;
+		}
+		input{
+			padding:9px 0px 7px 8px;
+			margin-top: 6px;
+			width: 280px;
+			height: 24px;
+			background-color: #FFF;
+			font-size: 12px;
+			color: #262626;
+			border-radius: 2px;
+			border: 1px solid #dbdbdb;
+		}
+		input[type="button"]{
+			text-align: center;
+			cursor: pointer;
+			margin-top: 12px;
+			background-color: #0095f6;
+			border-radius: 3px;
+			color: #fff;
+			width: 290px;
+			height: 34px;
+			font-weight: bold;
+		}
+		.or{
+			position: relative;
+			text-align: center;		
+			height: 70px;
+			width: 750px;
+			/*border:1px solid red;*/
+			/*margin-right: 160px;*/	
+			margin-left: 680px;
+			font-size: 13px;
+			color: #8e8e8e;
+		}
+		.fb-icon{
+			position: relative;
+			margin-top: 16px;
+			/*top: 300px;*/
+			margin-left: 0px;
+			/*margin-right: 320px;*/
+			height: 14px;
+			width: 16px;
+			/*border:2px solid #000;*/
+		}
+		.fb{	
+				position: relative;
+				text-align: center;
+				font-size: 14px;
+				font-weight: lighter;
+				width: 140px;
+				/*padding: 20px;*/
+				margin-top: 0px;
+				margin-bottom: 0px;
+				margin-left: 0px;
+			    color: #385185;
+			    font-weight: bold;
+			    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+			   /* border:2px solid #000;*/
+	}
+	#butt{
+		position: relative;
+		text-align: center;
+		padding: 10px;
+		/*border:1px solid #000;*/
+	}
+	form a{
+		text-decoration: none;
+		color: #385185;
+	}
+	.signup a{
+		text-decoration: none;
+		color: #0095f6;
+		font-weight: bold;
+	}
+	.forgot{
+			/*border:1px solid #000;*/
+			color: #00376b;
+			position:relative;
+			font-size: 12px;
+			/*font-weight: lighter;*/
+			text-align: center;
+			margin-top: 10px;
+			margin-left: 0px;
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+		}
+		.signup{
+			position: relative;
+			margin-top: 10px;
+			margin-left: 8px;
+			width: 350px;
+			height: 63px;
+			border: 1px solid #dbdbdb;
+			border-radius: 2px;
+			background-color: #fff;
+			font-weight: lighter;
+			font-size: 14px;
+			text-align: center;
+			justify-content: center;
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+		
+		}
+		.signup p{
+			margin-top: 20px;
+		}
+		#play,#app{
+			height: 40px;
+			width: 130px;
+		}
+		.app{
+			position: relative;
+			text-align: center;
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+		}
+		.app p{	
+			font-size: 14px;
+				padding: 0px;
+				margin-bottom: 22px;
+			    color: #262626;
+		}
+		nav{
+			/*width: 80%;*/
+			/*border:1px solid #00376b;*/
+			position:relative;
+			margin-top: 30px;
+			margin-left:100px;
+		/*	text-align:center;*/
+			/*margin-bottom: 0px;*/
+			/*color: #00376b;*/
+			color: #385185;
+			/*font-weight: lighter;*/
+			font-weight: bold;
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+			display: flex;
+			justify-content: space-around;
+			text-decoration: none;
+		}
+			ul{
+			font-size: 12px;
+			color: #00376b;
+
+			
+			/*text-align: center;*/
+			display: flex;
+			/*justify-content: space-around;*/
+		
+
+		}
+		ul a{
+			/*color: #385185;*/
+			color: #00376b;
+			text-decoration: none;
+		}
+		li{
+			list-style: none;
+			
+			/*text-align: center;*/
+			margin-left: 16px;
+			margin-right: 0px;
+	/*		display: flex;
+			justify-content: space-around;*/
+		}
+		.copyright{
+			color: #8e8e8e;
+			font-weight: lighter;
+		}
+
+</style>
+</head>
+
+<body>
+    <main>
+        <article>
+            <section class="insta-img">
+                <!-- 				<img src="main.png"> -->
+                <img class main
+                    src="https://i0.wp.com/www.digitalmarketingceo.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-03-at-11.05.04-PM-e1536030535339.png?fit=372%2C600&ssl=1">
+                <!-- 				<div class="slide">
+					<img src="1.jpg" class="slide1">
+					<img src="2.jpg" class="slide1">
+					<img src="3.jpg" class="slide1">
+					<img src="4.jpg" class="slide1">
+				</div> -->
+
+            </section>
+            <section>
+                <form>
+                    <h1>Instagram</h1>
+                    <!-- <input type="text" name="" placeholder="Id">
+					<input type="password" name="" placeholder="password"> -->
+                    <input type="texbox" name="username" placeholder="Phone number,username or email">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="button" name="login" value="Log In">
+
+                    <span class="or">-------------------------------- OR -------------------------------</span>
+                    <div class="butt" id="butt">
+                        <!-- <button class="butt"> -->
+                        <img src="fb.png" class="fb-icon">
+                        <span class="fb"><a href="https://www.facebook.com" id="fb-link">Login with facebook</a></span>
+
+                        <!-- 	</button> -->
+                    </div>
+                    <div class="forgot">
+                        <label><a href="https://www.facebook.com" id="fb-link">Forgot password?</a></label>
+                    </div>
+                </form>
+                <div class="signup">
+                    <p> Do you have account? <a href="https://www.instagram.com">Sign up</a></p>
+                </div>
+
+                <div class="app">
+                    <p>Get the app</p>
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                        id="app" name="store">
+                    <img src="data:image/png;base64,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"
+                        id="play" name="store">
+                </div>
+            </section>
+        </article>
+        <nav>
+            <ul>
+                <li><a href="https://www.instagram.com">ABOUT</a></li>
+                <li><a href="https://www.instagram.com">HELP</a></li>
+                <li><a href="https://www.instagram.com">PRESS</a></li>
+                <li><a href="https://www.instagram.com">API</a></li>
+                <li><a href="https://www.instagram.com">JOBS</a></li>
+                <li><a href="https://www.instagram.com">PRIVACY</a></li>
+                <li><a href="https://www.instagram.com">TERMS</a></li>
+                <li><a href="https://www.instagram.com">LOCATIONS</a></li>
+                <li><a href="https://www.instagram.com">TOP ACCOUNTS</a></li>
+                <li><a href="https://www.instagram.com">HASHTAGS</a></li>
+                <li><a href="https://www.instagram.com">LANGUAGE</a></li>
+            </ul>
+            <ul class="copyright">
+                <li>© 2020 INSTAGRAM FROM FACEBOOK</li>
+            </ul>
+        </nav>
+    </main>
+</body>
+
+</html>
