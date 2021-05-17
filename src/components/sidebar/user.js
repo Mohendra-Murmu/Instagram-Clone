@@ -3,32 +3,32 @@ import { Link } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import { DEFAULT_IMAGE_PATH } from '../../constants/paths';
 import { Avatar, Grid } from '@material-ui/core';
+import './user.css';
 
-export default function User({ username, fullName }) {
+export default function User({ username, fullName, avtr }) {
   return !username || !fullName ? (
     <Skeleton count={1} height={61} />
   ) : (
-    <Grid container className="user__header">    
-    <Link to={`/p/${username}`}>      
+    <div className="user-content">
+    <Link to={`/p/${username}`}>   
+    <Grid container spacing={2} pb={20}>    
+       
       <Grid item>
         <Avatar
         alt={fullName} 
-        src="/static/images/avatar/1.jpg" 
+        src={avtr}
         onError={(e) => {
             e.target.src = DEFAULT_IMAGE_PATH;
           }}
         />        
-      </Grid>
-      
+      </Grid>      
         <Grid item>
-            <p className="font-bold text-sm">{username}</p>
-        </Grid>
-        <Grid item>
-            <p className="text-sm">{fullName}</p>
-        </Grid>
-      
-    </Link>
+            <p className="font-bold text-sm user_name">{username}</p>
+            <p className="text-sm text-grey">{fullName}</p>
+        </Grid>        
     </Grid>      
+    </Link>
+    </div>
   );
 }
 

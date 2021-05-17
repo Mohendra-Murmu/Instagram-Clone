@@ -184,7 +184,7 @@ function Header() {
                                           
         <Avatar         
         alt={`${user?.fullName} profile`}
-        src={`/images/avatars/${user?.username}.jpg`}
+        src={user.profileAvtr}
         aria-controls="customized-menu"
         aria-haspopup="true"        
         color="primary"

@@ -1,5 +1,23 @@
 .user__header {
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.font-bold {
+  font-style: bold;
+}
+.text-sm {
+  font-size: medium;
+  color: #222;
+  text-decoration: solid;
+}
+.user-content {
+  padding-bottom: 10px;
+}
+.text-grey {
+  color: gray;
+  font-size: small;
+  font-weight: 500;
+}
+.user_name {
+  font-weight: 500;
+  font-style: inherit;
 }
