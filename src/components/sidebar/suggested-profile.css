@@ -1,0 +1,25 @@
+.sidebar-sugestions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+.suggestions__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text-sm {
+  font-size: medium;
+}
+.text-xs {
+  font-size: small;
+}
+.users-avtr {
+  display: flex;
+  margin-right: 9px;
+}
+.follow-btn {
+  cursor: pointer;
+}

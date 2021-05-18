@@ -13,7 +13,7 @@ export default function Sidebar() {
     <div style={{margin : 2}}>
       <User username={username} fullName={fullName} avtr={profileAvtr}/>
         <Divider pb={20}/>
-      <Suggestions userId={userId} following={following} loggedInUserDocId={docId} />
+      <Suggestions  userId={userId} following={following} loggedInUserDocId={docId} />
     </div>
   );
 }
