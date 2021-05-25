@@ -21,9 +21,8 @@ export default function Dashboard({ user: loggedInUser }) {
             <Header />
             <Container maxWidth="md" className="home__body">
                 <Grid container>
-                <Grid item xs={3} lg={8} md={8} className="articles">
-                        <Timeline />     
-                                           
+                <Grid item xs={12} lg={8} md={8} className="articles">
+                        <Timeline />                                                
                 </Grid>
                 <Hidden smDown>                
                 <Grid item  lg={4} md={4} className="sidebar_content">

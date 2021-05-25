@@ -29,8 +29,7 @@ export async function getUserByUserId(userId) {
   const user = result.docs.map((item) => ({
     ...item.data(),
     docId: item.id
-  }));
-
+  }));  
   return user;
 }
 
@@ -106,9 +105,10 @@ export async function getPhotos(userId, following) {
       }
       // photo.userId = 2
       const user = await getUserByUserId(photo.userId);
-      // raphael
+      // raphael      
       const { username } = user[0];
-      return { username, ...photo, userLikedPhoto };
+      const {profileAvtr} = user[0];      
+      return { username, ...photo, userLikedPhoto, profileAvtr };
     })
   );
 
@@ -128,6 +128,7 @@ export async function getUserPhotosByUserId(userId) {
   }));
   return photos;
 }
+
 
 export async function isUserFollowingProfile(loggedInUserUsername, profileUserId) {
   const result = await firebase

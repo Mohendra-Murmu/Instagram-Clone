@@ -74,7 +74,8 @@ function SignUp() {
           fullName,
           emailAddress: emailAddress.toLowerCase(),
           following: [],
-          profileAvtr: [],
+          followers: [],
+          profileAvtr: (''),
           dateCreated: Date.now()
           });
 

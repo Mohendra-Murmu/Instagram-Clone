@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types';
+import './style.css';
 
 export default function Image({ src, caption }) {
-  return <img src={src} alt={caption} />;
+  return <img 
+  className="post__image"
+  src={src}
+  alt={caption
+  } />;
 }
 
 Image.propTypes = {

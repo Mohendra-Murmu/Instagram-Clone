@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import FirebaseContext from '../../context/firebase';
 import UserContext from '../../context/user';
+import './style.css';
 
 export default function AddComment({ docId, comments, setComments, commentInput }) {
   const [comment, setComment] = useState('');
@@ -26,7 +27,7 @@ export default function AddComment({ docId, comments, setComments, commentInput 
   };
 
   return (
-    <div className="border-t border-gray-primary">
+    <div className="post__add__comment">
       <form
         className="flex justify-between pl-0 pr-5"
         method="POST"

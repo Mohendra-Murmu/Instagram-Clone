@@ -11,9 +11,10 @@
   margin-right: 28px;
   max-width: 614px;
   width: 100%;
-  padding-right: 20px;
 }
 .sidebar_content {
+  position: fixed;
+  right: 200px;
   margin-left: 10px;
   padding-left: 20px;
 }

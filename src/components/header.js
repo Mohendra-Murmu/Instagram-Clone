@@ -9,7 +9,6 @@ import SearchIcon from '@material-ui/icons/Search';
 import {makeStyles } from '@material-ui/core/styles';
 import HomeIcon from '@material-ui/icons/Home';
 import ExploreIcon from '@material-ui/icons/Explore';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import { withStyles } from '@material-ui/core/styles';
 import Menu from '@material-ui/core/Menu';
@@ -129,8 +128,7 @@ function Header() {
   };
   const { user: loggedInUser } = useContext(UserContext);
   const { user } = useUser(loggedInUser?.uid);  
-  const { firebase } = useContext(FirebaseContext);
-  
+  const { firebase } = useContext(FirebaseContext);  
   const history = useHistory();   
   
      const classes = useStyles();
@@ -175,10 +173,8 @@ function Header() {
               <Link to={ROUTES.DASHBOARD}  >
                 <div className="header_links"> <ExploreIcon /></div>
             </Link>                        
+                          
             
-              <div className="header_links">
-              <FavoriteBorderIcon />
-            </div>
              {user && (
               <div className="header_links">
                                           

@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import './style.css';
 
-export default function Footer({ caption, username }) {
+export default function Footer({ caption, username, userAvtr }) {
   return (
-    <div className="p-4 pt-2 pb-1">
-      <span className="mr-1 font-bold">{username}</span>
-      <span className="italic">{caption}</span>
+    <div className="post__footer">      
+          <span className="footer__user__name"><strong>{username}</strong></span>
+      <span className="footer__user__caption">{caption}</span>
     </div>
   );
 }

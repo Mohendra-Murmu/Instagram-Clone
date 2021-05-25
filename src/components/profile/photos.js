@@ -1,57 +1,162 @@
-/* eslint-disable no-nested-ternary */
 import PropTypes from 'prop-types';
 import Skeleton from 'react-loading-skeleton';
+import './photos.css';
+import React from 'react';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import { Box } from '@material-ui/core';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          {children}
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+
+const AntTabs = withStyles({
+  root: {
+    borderTop: '1px solid #e8e8e8',
+  },
+  indicator: {
+    top : "0px",
+    backgroundColor: 'lightgrey',
+  },
+})(Tabs);
+
+const AntTab = withStyles((theme) => ({
+  root: {
+    textTransform: 'none',
+    minWidth: 72,
+    fontWeight: theme.typography.fontWeightRegular,
+    marginRight: theme.spacing(4),
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    '&:hover': {
+      color: '#222',
+      opacity: 1,
+    },
+    '&$selected': {
+      color: '#222',
+      fontWeight: theme.typography.fontWeightMedium,
+    },
+    '&:focus': {
+      color: '#222',
+    },
+  },
+  selected: {},
+}))((props) => <Tab disableRipple {...props} />);
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  padding: {
+    padding: theme.spacing(3),
+  },
+  demo1: {
+    backgroundColor: theme.palette.grey,
+  },  
+}));
 
 export default function Photos({ photos }) {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
-    <div className="h-16 border-t border-gray-primary mt-12 pt-4">
-      <div className="grid grid-cols-3 gap-8 mt-4 mb-12">
-        {!photos
+    
+    <div className={classes.root}>
+      <div className={classes.demo1}>
+        <AntTabs value={value} onChange={handleChange} aria-label="ant example" centered>
+          <AntTab label="POSTS" {...a11yProps(0)} />
+          <AntTab label="IGTV" {...a11yProps(1)} />
+          <AntTab label="SAVED" {...a11yProps(2)} />
+          <AntTab label="TAGGED" {...a11yProps(3)} />
+        </AntTabs>
+        <Typography className={classes.padding} />
+      </div>         
+      <TabPanel value={value} index={0}>        
+        <div className="gallery">
+          {!photos
           ? new Array(12).fill(0).map((_, i) => <Skeleton key={i} width={320} height={400} />)
           : photos.length > 0
-          ? photos.map((photo) => (
-              <div key={photo.docId} className="relative group">
-                <img src={photo.imageSrc} alt={photo.caption} />
-
-                <div className="absolute bottom-0 left-0 bg-gray-200 z-10 w-full justify-evenly items-center h-full bg-black-faded group-hover:flex hidden">
-                  <p className="flex items-center text-white font-bold">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="w-8 mr-4"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    {photo.likes.length}
-                  </p>
-
-                  <p className="flex items-center text-white font-bold">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="w-8 mr-4"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    {photo.comments.length}
-                  </p>
-                </div>
-              </div>
-            ))
+          ? photos.map((photo) => (       
+			<div className="gallery-item" key={photo.docId} tabIndex="0">
+				<img  className="gallery-image"
+        src={photo.imageSrc} alt={photo.caption}
+        />				
+				<div className="gallery-item-info">
+					<ul as="article">
+						<li className="gallery-item-likes">              
+              <FavoriteIcon /> {photo.likes.length}
+            </li>
+						<li className="gallery-item-comments">
+              <ChatBubbleIcon /> {photo.comments.length}
+            </li>
+					</ul>
+				</div>
+			</div>
+       ))
           : null}
-      </div>
-
-      {!photos || (photos.length === 0 && <p className="text-center text-2xl">No Posts Yet</p>)}
+          
+           {!photos || (photos.length === 0 && <p className="text-center text-2xl">No Posts Yet</p>)}
+		</div>        
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        Item Two
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        Item Three
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        Item Four
+      </TabPanel>
+    
+    
     </div>
   );
 }

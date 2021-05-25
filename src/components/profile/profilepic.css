@@ -1,0 +1,26 @@
+.card-title {
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.card__upload_button {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  color: rgb(73, 105, 235);
+  cursor: pointer;
+}
+.card__remove_button {
+  padding: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  color: crimson;
+}
+.card__cancel_button {
+  padding: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}

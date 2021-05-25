@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { formatDistance } from 'date-fns';
 import { Link } from 'react-router-dom';
 import AddComment from './add-comment';
+import './style.css';
 
 export default function Comments({ docId, comments: allComments, posted, commentInput }) {
   const [comments, setComments] = useState(allComments);
@@ -14,19 +15,20 @@ export default function Comments({ docId, comments: allComments, posted, comment
 
   return (
     <>
-      <div className="p-4 pt-1 pb-4">
+      <div className="comments">
         {comments.slice(0, commentsSlice).map((item) => (
-          <p key={`${item.comment}-${item.displayName}`} className="mb-1">
+          <p key={`${item.comment}-${item.displayName}`} mb={2}>
             <Link to={`/p/${item.displayName}`}>
-              <span className="mr-1 font-bold">{item.displayName}</span>
+              <span className="font-bold" mr={2}><strong>{item.displayName}</strong></span>
             </Link>
             <span>{item.comment}</span>
           </p>
         ))}
         {comments.length >= 3 && commentsSlice < comments.length && (
           <button
-            className="text-sm text-gray-base mb-1 cursor-pointer focus:outline-none"
+            className="text-sm text-gray-base cursor-pointer focus:outline-none"
             type="button"
+            mb={2}
             onClick={showNextComments}
             onKeyDown={(event) => {
               if (event.key === 'Enter') {
@@ -37,7 +39,7 @@ export default function Comments({ docId, comments: allComments, posted, comment
             View more comments
           </button>
         )}
-        <p className="text-gray-base uppercase text-xs mt-2">
+        <p className="text-gray-base uppercase text-xs" mt={2}>
           {formatDistance(posted, new Date())} ago
         </p>
       </div>
