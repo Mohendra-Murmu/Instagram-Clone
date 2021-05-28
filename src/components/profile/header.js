@@ -13,6 +13,8 @@ import Button from '@material-ui/core/Button';
 import Popover from '@material-ui/core/Popover';
 import Modal from '@material-ui/core/Modal';
 import ProfilePic from './profilepic';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
 
 
 
@@ -174,9 +176,11 @@ export default function Header({
                     <span className="profile-stat-count">{photosCount}</span> posts
               </Grid>
                   <Grid item >
+                    <Link>
                     <span className="profile-stat-count">{followerCount}</span>
                     {` `}
                     {followerCount === 1 ? `follower` : `followers`}
+                    </Link>
                   </Grid>
                   <Grid item >
                     <span className="profile-stat-count">{following?.length}</span> following
@@ -235,6 +239,16 @@ export default function Header({
                 >
                   <ImageUpload userId={user.userId} />
                 </Popover>
+              </div>
+              <div className="suggestion">
+                 <Link to={ROUTES.SUGGESTIONS}>
+                 <Button                  
+                  variant="contained"
+                  color="primary"                  
+                  >
+                    Suggestions
+                  </Button>
+                  </Link>
               </div>
             </>
           )}

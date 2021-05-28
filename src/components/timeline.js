@@ -10,7 +10,7 @@ export default function Timeline() {
   return (
     <div>
       {!photos ? (
-        <Skeleton count={3} width={500} height={500} />
+        <Skeleton count={2} width={450} height={450} />
       ) : (
         photos.map((content) => <Post key={content.docId} content={content} />)        
       )}

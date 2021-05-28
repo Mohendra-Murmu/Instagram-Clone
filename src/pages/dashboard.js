@@ -25,7 +25,7 @@ export default function Dashboard({ user: loggedInUser }) {
                         <Timeline />                                                
                 </Grid>
                 <Hidden smDown>                
-                <Grid item  lg={4} md={4} className="sidebar_content">
+                <Grid item sm={12} lg={4} md={4} className="sidebar_content">
                         <Sidebar />
                 </Grid>
                 </Hidden>
